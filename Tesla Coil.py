@@ -2,12 +2,9 @@ import pygame
 import random
 
 
-#Tva e na python 3.5 zaradi pygame nz tup sum
-
-#Init makes things work i dunno ...
 pygame.init()
 
-#Making the color variables
+#Color variables
 black = (0,0,0)
 purplish_blue = (204, 153, 255)
 purple = (178, 102, 255)
@@ -22,7 +19,7 @@ pygame.display.set_caption('Tesla Coil')
 #Function for drawing the coil and the lightnings
 def draw_a_tree(mouse_position):
 
-    #Placing the Coil on the damn screen
+    #Placing the Coil on the screen
     coil = pygame.image.load('tesla_coil.png')
     coil = pygame.transform.scale(coil, (500, 450))
     rect = coil.get_rect()
@@ -44,12 +41,12 @@ def draw_a_tree(mouse_position):
         pygame.display.update()
 
 game_exit = False
-#This makes the window not close immediately
 
 while not game_exit:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             game_exit = True
+
     # Mouse position
     position = pygame.mouse.get_pos()
 
